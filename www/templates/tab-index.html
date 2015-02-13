@@ -1,6 +1,6 @@
 <ion-view view-title="Index">
   <ion-content class="padding">
-    <form ng-submit="submitRegistration(registrationForm)">
+    <form ng-submit="submitRegistration(registrationForm)" role="form" ng-init="registrationForm = {}">
       <div class="list">
         <label class="item item-input">
           <input type="text" name="email" placeholder="Email" ng-model="registrationForm.email">
