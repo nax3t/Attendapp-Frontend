@@ -1,0 +1,23 @@
+<ion-view view-title="Index">
+  <ion-content class="padding">
+    <form ng-submit="submitRegistration(registrationForm)">
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" name="email" placeholder="Email" ng-model="registrationForm.email">
+        </label>
+        <label class="item item-input">
+          <input type="password" name="password" placeholder="Password" ng-model="registrationForm.password">
+        </label>
+        <label class="item item-input">
+          <input type="password" name="password_confirmation" placeholder="Password Confirmation" ng-model="registrationForm.password_confirmation">
+        </label>
+        <div>
+          <button class="button button-block button-positive" type="submit">Create account</button>
+        </div>
+        <div style="text-align: center">
+          Or <a href="#/login">Already have an account?</a>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
