@@ -7,11 +7,10 @@ angular.module('starter.controllers', [])
         $auth.submitLogin({
           email: $scope.user.email,
           password: $scope.user.password
-        });
-        console.dir(resp.config.data.email);
-      })
-      .catch(function(resp) { 
-        // handle error response
+        })
+        $location.path('/tab/welcome');
+        console.log(resp.config.data.email);
+        alert(resp.config.data.email);
       });
   }
 });
