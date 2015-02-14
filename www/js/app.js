@@ -24,7 +24,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 // Configure backend api for auth provider
 .config(function($authProvider) {
         $authProvider.configure({
-            apiUrl: 'https://qr3backend.herokuapp.com'
+            apiUrl: 'http://localhost:3000'
         });
     })
 
