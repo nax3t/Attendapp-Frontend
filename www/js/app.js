@@ -55,16 +55,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
   
-  .state('tab.welcome', {
+  .state('welcome', {
     url: '/welcome',
-    views: {
-      'tab-welcome': {
-        templateUrl: 'templates/tab-welcome.html'
-      }
-    }
+    templateUrl: 'templates/welcome.html'
+  })
+
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/user_sessions/new.html',
+    controller: 'UserSessionsCtrl' 
   })
 
   // if none of the above states are matched, use this as the fallback
- // $urlRouterProvider.otherwise('/index');
+ $urlRouterProvider.otherwise('/tab/index');
 
 });

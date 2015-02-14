@@ -8,9 +8,17 @@ angular.module('starter.controllers', [])
           email: $scope.user.email,
           password: $scope.user.password
         })
-        $location.path('/tab/welcome');
-        console.log(resp.config.data.email);
-        alert(resp.config.data.email);
+        $location.path('/welcome');
       });
   }
-});
+})
+
+.controller('UserSessionsCtrl', function($scope, $auth, $location) {
+  $scope.login = function() {
+    $auth.submitLogin($scope.login)
+      .then(function(resp) { 
+        console.log('logged in!');
+        console.log(resp.config.data.email);
+      })
+  }
+})
